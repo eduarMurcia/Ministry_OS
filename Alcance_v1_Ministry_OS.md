@@ -8,15 +8,15 @@
 ## Capacidades operativas (v1)
 
 1. **Administrar directorio de personas** — tres sub-registros: Miembros (con cargo/rol asignado), Nuevos (en qué proceso están o cuánto tiempo llevan asistiendo), Visitantes (para seguimiento). Entrada manual, exportable.
-2. **Preparar informes contables** — las donaciones se siguen registrando manualmente; el sistema solo genera reportes, no gestiona el dinero ni procesa pagos.
-3. **Planificar y coordinar servicios de adoración** — basado en la plantilla real de orden de culto (dos tiempos, himnos, responsables, enseñanza, diezmos, escuela dominical por grupos, anuncios, predicación). Sin biblioteca de canciones digital — se usa himnario físico.
+2. **Preparar informes contables** — las donaciones se siguen registrando manualmente; el sistema solo genera reportes, no gestiona el dinero ni procesa pagos. Se actualiza semanalmente, con ingresos y egresos organizados por categorías.
+3. **Planificar y coordinar servicios de adoración** — basado en la plantilla real de orden de culto (dos tiempos, himnos, responsables, enseñanza, diezmos, escuela dominical por grupos, anuncios, predicación). Sin biblioteca de canciones digital — se usa himnario físico. Esta plantilla es la del servicio del domingo; falta crear una equivalente para el servicio del miércoles.
 4. **Programar y asignar responsables** — integrado directamente con el formato de orden de servicio; al asignar un "cargo" (himnos, enseñanza, diezmos, predicación) se notifica a cada responsable.
 5. **Registrar asistencia y seguridad de niños** — check-in de escuela dominical / niños.
 6. **Gestionar grupos pequeños** — control de membresía y asistencia por grupo.
 7. **Organizar eventos (sin pagos)** — inscripciones siempre gratuitas; se mantiene documentación específica y detallada por evento (formato a definir más adelante).
 8. ~~Crear formularios públicos~~ — descartado para v1.
 9. **Comunicar con la congregación** — exclusivamente vía WhatsApp (ya existe una comunidad con varios grupos). No email ni SMS.
-10. **Gestionar publicaciones** (canal, redes sociales, página web) — rol de "equipo de marketing": organizar y programar publicaciones en los medios existentes, no producir contenido desde cero.
+10. **Gestionar publicaciones** (canal, redes sociales, página web) — rol de "equipo de marketing": organizar y programar publicaciones en los medios existentes; en algunos casos también produce contenido desde cero, basado en temas o sermones.
 11. **Gestionar calendario y tareas** — calendario de eventos, integración deseable con Google Calendar, más una lista de tareas pendientes.
 12. ~~Portal de autoservicio para miembros~~ — descartado para v1 (la primera versión es administrativa, no de cara al feligrés).
 

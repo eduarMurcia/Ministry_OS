@@ -1,6 +1,6 @@
 # Skills y Conectores Necesarios — Ministry OS (v1)
 
-**Fecha:** Julio 2026
+**Fecha:** Julio 2026 · última actualización 2026-07-03 (primera revisión mensual automática)
 **Metodología:** cada recomendación está mapeada contra una capacidad ya cerrada en `Alcance_v1_Ministry_OS.md`. No se incluye nada que no resuelva una necesidad ya validada, siguiendo el principio de simplicidad del propio proyecto.
 
 ---
@@ -24,18 +24,20 @@
 
 | Conector | Para qué | Estado |
 |---|---|---|
-| **Google Calendar** | Integración del calendario de eventos, pedida explícitamente | Requiere autorización tuya en configuración de conectores. |
-| **Google Drive** | Respaldo/colaboración adicional si se quiere además del repo de GitHub | Opcional — el repo ya cumple la función de persistencia. |
-| **GitHub** | Que yo pueda operar el repo directamente (historial, archivos) sin depender de comandos de terminal manuales | Recomendado para agilizar, no imprescindible (ya funciona por terminal). |
+| **Google Calendar** | Integración del calendario de eventos, pedida explícitamente | Conectado y verificado (2026-07-03). Falta crear el calendario dedicado a la iglesia (el conector no permite crear calendarios, solo eventos en uno existente). |
+| **Google Drive** | Respaldo/colaboración adicional al repo de GitHub | Conectado y verificado (2026-07-03) — funcionando. |
+| **GitHub** | Que yo pueda operar el repo directamente (historial, archivos) sin depender de comandos de terminal manuales | Aún no conectado como MCP; se sigue usando git manual por terminal, que funciona bien. Conectar solo si empieza a ser fricción real. |
 
 ---
 
 ## 3. Gap real detectado: WhatsApp
 
-Elegiste WhatsApp como único canal de comunicación con la congregación, pero **no existe hoy un conector de WhatsApp en el registro de MCP disponible** (lo verifiqué directamente). Dos caminos:
+Elegiste WhatsApp como único canal de comunicación con la congregación. **No existe un conector de WhatsApp en el registro oficial de MCP de Anthropic** (verificado directamente, y reconfirmado en la revisión mensual de 2026-07-03). Sin embargo, la revisión externa de julio 2026 encontró que ya existen proveedores de terceros que ofrecen servidores MCP de WhatsApp Business: **Wassenger, EZContact, AnythingMCP**, y el repositorio abierto **`whatsapp-mcp`** en GitHub. Esto cambia el diagnóstico: el gap ya no es "la tecnología no existe", sino "hay que integrar un servicio de terceros con tus propias credenciales de WhatsApp Business" — es trabajo de integración, no un conector que se pueda simplemente activar desde este entorno.
 
-- Mantenerlo manual en la v1 (tú u otra persona sigue enviando los mensajes a los grupos existentes) — recomendado por ahora.
-- Si más adelante se vuelve un cuello de botella, investigar un proveedor de WhatsApp Business API de terceros e integrarlo como MCP propio — es trabajo de desarrollo, no una skill que se pueda simplemente activar.
+Dos caminos:
+
+- Mantenerlo manual en la v1 (tú u otra persona sigue enviando los mensajes a los grupos existentes) — recomendado por ahora, no hay urgencia.
+- Si más adelante se vuelve un cuello de botella real, evaluar con calma uno de esos proveedores de terceros (Wassenger, EZContact, AnythingMCP o el repo `whatsapp-mcp`) e integrarlo — ya no es un callejón sin salida técnico, solo requiere decidir cuándo se justifica el esfuerzo.
 
 ---
 
@@ -52,9 +54,12 @@ Elegiste WhatsApp como único canal de comunicación con la congregación, pero 
 
 ## 5. Recomendación como director de proyecto
 
-Antes de conectar todo lo de la sección 2, propongo un orden:
+Estado al 2026-07-03: Google Calendar y Google Drive ya están conectados y verificados. Sigue así el orden recomendado:
 
-1. Autorizar **Google Calendar** primero — es el único pedido explícito y no reemplaza nada que ya funcione.
-2. Dejar **GitHub** y **Drive** en pausa mientras el flujo manual (terminal) siga siendo suficiente; conectar solo si empieza a ser fricción real.
-3. No tocar **WhatsApp** todavía — es un problema de integración, no de activar un conector existente.
+1. ~~Autorizar Google Calendar~~ — hecho. Pendiente: crear manualmente el calendario dedicado a la iglesia (el conector no crea calendarios).
+2. Dejar **GitHub** en pausa mientras el flujo manual (terminal) siga siendo suficiente; conectar solo si empieza a ser fricción real.
+3. No integrar **WhatsApp** todavía, aunque ya se identificaron proveedores viables (Wassenger, EZContact, AnythingMCP, `whatsapp-mcp`) — es trabajo de integración con credenciales propias, solo se justifica si el canal manual se vuelve un cuello de botella real.
 4. No crear ninguna skill nueva (vía skill-creator) hasta producir al menos un caso real de punta a punta con las skills genéricas ya disponibles (docx/pptx/xlsx/canvas-design) — esto es exactamente el "walking skeleton" que ya habíamos acordado como siguiente paso natural antes de ARC-001.
+5. Video, transcripción y el "Ministry Platform AI" de ACST (ChMS con IA nativa sobre MCP) quedan como referencia de estado del arte a futuro — no ameritan evaluación todavía; son capacidades de largo plazo, no de la v1.
+
+Esta sección se revisa automáticamente el 1° de cada mes (auditoría interna + búsqueda externa).
