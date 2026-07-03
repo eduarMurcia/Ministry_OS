@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ministry OS — Dashboard</title>
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --card: #ffffff;
+    --border: #e5e5e0;
+    --text: #1f1f1d;
+    --muted: #6b6b66;
+    --accent: #2f5233;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 32px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 22px; font-weight: 600; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .card h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+  ul { margin: 0; padding-left: 18px; }
+  li { margin-bottom: 8px; line-height: 1.4; font-size: 14px; }
+  li.done { color: var(--muted); text-decoration: line-through; }
+  .pill {
+    display: inline-block;
+    background: #eef3ee;
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 6px 0; vertical-align: top; border-bottom: 1px solid var(--border); }
+  td:first-child { font-weight: 600; width: 40%; color: var(--accent); }
+  .files { font-size: 13px; color: var(--muted); margin-top: 28px; }
+  .files code { background: #ececea; padding: 2px 6px; border-radius: 4px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="pill">Ministry OS</span>
+  <h1>Panel de productividad</h1>
+  <div class="sub">Eduard · actualizado 2026-07-03</div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Tareas</h2>
+      <ul>
+        <li><strong>Esta semana</strong>: Redactar ARC-001 (Modelo Conceptual), anclado en el Alcance v1 y el Mapa de Capacidades ya cerrados.</li>
+        <li><strong>Backlog</strong>: Definir documentación específica de eventos.</li>
+        <li><strong>Backlog</strong>: Formalizar roles del sistema (tesorería, multimedia, secretaría).</li>
+        <li class="done">Mapa de capacidades (Planning Center / Breeze) extraído.</li>
+        <li class="done">Alcance v1 de Ministry OS cerrado.</li>
+        <li class="done">Repositorio GitHub creado y primer push hecho.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Proyecto</h2>
+      <table>
+        <tr><td>Nombre</td><td>Ministry OS</td></tr>
+        <tr><td>Enfoque v1</td><td>Administración interna + producción de contenido</td></tr>
+        <tr><td>Primer contexto real</td><td>1ª Iglesia Bíblica Bautista de Montenegro</td></tr>
+        <tr><td>Repositorio</td><td>github.com/eduarMurcia/Ministry_OS</td></tr>
+        <tr><td>Idioma oficial</td><td>Español (ADR-008)</td></tr>
+        <tr><td>Siguiente paso</td><td>ARC-001 — Modelo Conceptual</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="files">
+    Archivos de este proyecto: <code>TASKS.md</code>, <code>CLAUDE.md</code>, <code>memory/glossary.md</code>, <code>memory/projects/ministry-os.md</code>, <code>Alcance_v1_Ministry_OS.md</code>, <code>Mapa_Capacidades_ChMS.md</code>.
+    <br>Corre <code>/productivity:update</code> para refrescar este panel con la actividad más reciente.
+  </div>
+</div>
+</body>
+</html>
